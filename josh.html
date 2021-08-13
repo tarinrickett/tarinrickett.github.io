@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>HBD JDP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  .card {
+    background-color: pink;
+    margin: auto;
+    padding: 24px;
+    height: 100%;
+  }
+
+  .title {
+    font-family: 'Satisfy', cursive;
+    font-size: 4rem;
+    text-align: center;
+    margin: 24px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .poetry {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 44px;
+    margin-right: 24px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2rem;
+  }
+
+  .line {
+    font-size: 1.6rem;
+    font-family: 'Patrick Hand', cursive;
+  }
+
+  #refresh {
+    height: 100%;
+    margin: auto;
+    font-size: 5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .xo {
+    font-family: 'Satisfy', cursive;
+    font-size: 2.5rem;
+    text-align: right;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .card {
+      max-width: 600px;
+      width: 80%;
+      height: 80vh;
+      padding: 60px;
+    }
+
+    .title {
+      margin: revert;
+    }
+
+    .container {
+      flex-direction: row;
+    }
+
+    .poetry {
+      min-width:296px;
+    }
+  }
+</style>
+
+<body>
+	<section class="card">
+    <h1 class="title">Happy Birthday, Josh!</h1>
+    <div class="container">
+      <div class="poetry">
+        <div style="display:flex;">
+          <button onclick="getJ();" class="btn">J</button>
+          <p id="j" class="line">Just grateful for the</p>
+        </div>
+        <div style="display:flex;">
+          <button onclick="getO();" class="btn">O</button>
+          <p id="o" class="line">Opportunity to know you</p>
+        </div>
+        <div style="display:flex;">
+          <button onclick="getS();" class="btn">S</button>
+          <p id="s" class="line">So special to</p>
+        </div>
+        <div style="display:flex;">
+          <button onclick="getH();" class="btn">H</button>
+          <p id="h" class="line">Have you as a roommate</p>
+        </div>
+      </div>
+      <button onclick="refresh();" id="refresh">↻</button>
+    </div>
+    <p class="xo">You're the best and ily,</br>Tarin</p>
+  </section>
+</body>
+
+<script>
+  const j = [
+    'Jeezus',
+    'Jenius',
+    'Just'
+  ], o = [
+    // 'Ohmygod',
+    // 'Only you could',
+    'Original',
+    'Outrageous',
+    'Outstanding'
+  ], s = [
+    'Seriously',
+    'Simply',
+    'Super',
+    'Singing'
+  ], h = [
+    'H-amazing',
+    'Heartwarming',
+    'Hoe',
+    'Honest'
+  ];
+
+  function randAdj(letter) {
+    let arr;
+    switch(letter) {
+      case 'j':
+        arr = j;
+        break;
+      case 'o':
+        arr = o;
+        break;
+      case 's':
+        arr = s;
+        break;
+      case 'h':
+        arr = h;
+        break;
+    }
+    let el = document.querySelector(`#${letter}`);
+    if (el && arr) el.innerText = arr[Math.floor(Math.random() * arr.length)];
+  };
+
+  function refresh() {
+    randAdj('j');
+    randAdj('o');
+    randAdj('s');
+    randAdj('h');
+  }
+
+  function getJ() {
+    randAdj('j');
+  };
+
+  function getO() {
+    randAdj('o');
+  };
+
+  function getS() {
+    randAdj('s');
+  };
+
+  function getH() {
+    randAdj('h');
+  };
+</script>
+</html>
