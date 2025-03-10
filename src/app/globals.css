@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --light: #F5F5F5;
+  --dark: #1C2A33;
+  --hot-pink: #FF69B4;
+  --coral-red: #FF6B6B;
+  --marigold-yellow: #F6C609;
+  --electric-green: #6BFF6B;
+  --cerulean-blue: #2079C7;
+  --lavender-purple: #B089D0;
+}
+
+@theme inline {
+  --color-canvas: var(--light);
+  --color-base: var(--dark);
+  --color-accent: var(--electric-green);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-canvas: var(--dark);
+    --color-base: var(--light);
+    --color-accent: var(--electric-green);
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans italic bg-canvas;
+  }
+
+  a {
+    @apply text-base hover:text-accent;
+  }
+}
