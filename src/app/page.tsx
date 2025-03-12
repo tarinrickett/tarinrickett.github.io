@@ -12,7 +12,7 @@ export default function Home() {
           <div className="hero-body my-auto">
             <h1 className="hero-title text-4xl font-bold inline">hi, i'm tarin!</h1>
             <p className="hero-text ml-2 inline">
-              i am a cross-functional product engineer and technical leader with a deep understanding of people problems, from team dynamics to empathy for our users. i lead workshops and events across diverse communities to demystify technology and empower my audiences. i have a passion for social impact, particularly women in tech and how tech can– and must – be a lever for social good.
+              i am a cross-functional product engineer and technical leader with a deep understanding of people problems, from team dynamics to empathy for our users. i lead workshops and events across diverse communities to demystify technology and empower my audiences. i have a passion for social impact, particularly women in tech and how tech can— and must — be a lever for social good.
             </p>
           </div>
         </div>
