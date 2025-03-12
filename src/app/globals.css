@@ -30,7 +30,23 @@
 
 @layer base {
   body {
-    @apply font-sans italic bg-canvas;
+    @apply bg-canvas font-sans lowercase;
+  }
+  
+  h2 {
+    @apply text-3xl font-bold italic;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-xl italic;
+  }
+
+  p {
+    @apply italic;
   }
 
   a {
