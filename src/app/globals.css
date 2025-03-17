@@ -17,6 +17,7 @@
 @theme inline {
   --color-canvas: var(--light);
   --color-base: var(--dark);
+  --color-base-on-dark: var(--light);
   --color-accent: var(--electric-green);
 }
 
@@ -24,13 +25,14 @@
   :root {
     --color-canvas: var(--dark);
     --color-base: var(--light);
+    --color-base-on-dark: var(--dark);
     --color-accent: var(--electric-green);
   }
 }
 
 @layer base {
   body {
-    @apply bg-canvas font-sans lowercase;
+    @apply bg-accent font-sans lowercase;
   }
   
   h2 {
@@ -45,7 +47,7 @@
     @apply text-xl italic;
   }
 
-  p {
+  p, span {
     @apply italic;
   }
 

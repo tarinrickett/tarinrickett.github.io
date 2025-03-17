@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Card } from "@/ui/card";
 import { CardSection } from "@/ui/card-section";
 import { Divider } from "@/ui/divider";
+import { advisingExperienceCards, speakerExperienceCards, techExperienceCards } from "@/constants/experience";
 
 export default function Home() {
   return (
@@ -23,11 +24,27 @@ export default function Home() {
         </div>
       </main>
       <Divider />
-      <CardSection title="Technical Leader">
-        <Card title="Product Engineering Lead" company="BlueDot Impact" location="London, U.K." img="/bluedot.jpeg" />
-        <Card title="Staff Software Engineer" company="LinkedIn" location="San Francisco, U.S." img="/staff-swe.jpeg" />
-        <Card title="Senior Software Engineer" company="LinkedIn" location="San Francisco, U.S." img="/sr-swe.jpeg" />
-        <Card title="UI Engineer" company="LinkedIn" location="San Francisco, U.S." img="/ui-eng.jpeg" />
+      <CardSection title="Technical Product Leader">
+        {techExperienceCards.map((card, index) => (
+          <Card
+            key={index}
+            title={card.title}
+            company={card.company}
+            location={card.location}
+            img={card.img}
+            tags={card.tags}
+          />
+        ))}
+      </CardSection>
+      <CardSection title="Community Advisor">
+        {advisingExperienceCards.map((card, index) => (
+          <Card key={index} title={card.title} company={card.company} location={card.location} img={card.img} tags={card.tags} />
+        ))}
+      </CardSection>
+      <CardSection title="Workshop Lead & Speaker">
+        {speakerExperienceCards.map((card, index) => (
+          <Card key={index} title={card.title} company={card.company} location={card.location} img={card.img} tags={card.tags} />
+        ))}
       </CardSection>
       <Footer />
     </div>
