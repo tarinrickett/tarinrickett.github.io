@@ -1,7 +1,6 @@
 import { Nav } from "@/ui/nav";
 import { Footer } from "@/ui/footer";
 import Image from "next/image";
-import { Card } from "@/ui/card";
 import { CardSection } from "@/ui/card-section";
 import { Divider } from "@/ui/divider";
 import { advisingExperienceCards, speakerExperienceCards, techExperienceCards } from "@/constants/experience";
@@ -24,28 +23,9 @@ export default function Home() {
         </div>
       </main>
       <Divider />
-      <CardSection title="Technical Product Leader">
-        {techExperienceCards.map((card, index) => (
-          <Card
-            key={index}
-            title={card.title}
-            company={card.company}
-            location={card.location}
-            img={card.img}
-            tags={card.tags}
-          />
-        ))}
-      </CardSection>
-      <CardSection title="Community Advisor">
-        {advisingExperienceCards.map((card, index) => (
-          <Card key={index} title={card.title} company={card.company} location={card.location} img={card.img} tags={card.tags} />
-        ))}
-      </CardSection>
-      <CardSection title="Workshop Lead & Speaker">
-        {speakerExperienceCards.map((card, index) => (
-          <Card key={index} title={card.title} company={card.company} location={card.location} img={card.img} tags={card.tags} />
-        ))}
-      </CardSection>
+      <CardSection title="Technical Product Leader" cards={techExperienceCards} />
+      <CardSection title="Women in Tech Advisor" cards={advisingExperienceCards} />
+      <CardSection title="Workshop Lead & Speaker" cards={speakerExperienceCards} />
       <Footer />
     </div>
   );

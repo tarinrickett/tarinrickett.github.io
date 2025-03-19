@@ -4,7 +4,7 @@ export const techExperienceCards = [
     company: "BlueDot Impact",
     location: "London, U.K.",
     img: "/bluedot.jpeg",
-    tags: ["Product leadership", "Platform architecture", "Team management", "0 to 1"]
+    tags: ["Product leadership", "Platform architecture", "Team management"]
   },
   {
     title: "Staff Software Engineer",
