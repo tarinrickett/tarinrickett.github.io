@@ -10,7 +10,7 @@ export function Card(props: {
     tags?: string[] 
 }) {
   return (
-    <div className="card h-full w-full md:w-[526px] p-4 flex flex-col bg-canvas rounded-lg border-2 border-accent shrink-0">
+    <div className="card h-full w-[320px] md:w-[526px] p-4 flex flex-col bg-canvas rounded-lg border-2 border-accent shrink-0">
         <img className="card__img w-full h-80 object-cover rounded-lg mb-4" src={props.img} alt="Tarin at BlueDot Impact" />
         <div className="card__body">
             <h3>{props.title}</h3>

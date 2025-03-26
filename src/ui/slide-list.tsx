@@ -1,5 +1,6 @@
 'use client';
 import { useRef } from 'react';
+import { isMobile } from 'react-device-detect';
 
 interface SlideListProps {
   children: React.ReactNode;
@@ -19,7 +20,7 @@ const SlideListButton = ({ direction, onClick }: { direction: 'left' | 'right'; 
 
 export const SlideList = ({
   children,
-  scrollAmount = 526,
+  scrollAmount = isMobile ? 320 : 526,
   title 
 }: SlideListProps) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
