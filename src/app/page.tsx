@@ -12,7 +12,8 @@ export default function Home() {
       <main className="main px-4 sm:px-8 max-w-7xl mx-auto">
         <div className="hero flex flex-col sm:flex-row gap-4 justify-center items-center">
           <div className="hero-image flex-shrink-0">
-            <Image src="/bubble--green.png" alt="Tarin" width={240} height={240} />
+            <Image src="/bubble--green.png" alt="Tarin" width={240} height={240} className="block dark:hidden" />
+            <Image src="/bubble--purple.png" alt="Tarin" width={240} height={240} className="hidden dark:block" />
           </div>
           <div className="hero-body my-auto">
             <h1 className="hero-title text-4xl font-bold inline">Hi, I&apos;m Tarin!</h1>
