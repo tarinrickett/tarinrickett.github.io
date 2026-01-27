@@ -12,7 +12,7 @@ export default function Home() {
       <main className="main px-4 sm:px-8 max-w-7xl mx-auto">
         <div className="hero flex flex-col sm:flex-row gap-4 justify-center items-center">
           <div className="hero-image flex-shrink-0">
-            <Image src="/tarin--green.png" alt="Tarin" width={240} height={240} />
+            <Image src="/bubble--green.png" alt="Tarin" width={240} height={240} />
           </div>
           <div className="hero-body my-auto">
             <h1 className="hero-title text-4xl font-bold inline">Hi, I&apos;m Tarin!</h1>
@@ -24,8 +24,8 @@ export default function Home() {
       </main>
       <Divider />
       <CardSection title="Technical Product Leader" cards={techExperienceCards} />
-      <CardSection title="Women in Tech Advisor" cards={advisingExperienceCards} />
-      <CardSection title="Workshop Lead & Speaker" cards={speakerExperienceCards} />
+      <CardSection title="Community Builder" cards={advisingExperienceCards} />
+      <CardSection title="Speaker & Workshop Lead" cards={speakerExperienceCards} />
       <Footer />
     </div>
   );

@@ -11,7 +11,8 @@ export function CardSection(props: {
     location?: string, 
     date?: string, 
     img: string, 
-    tags?: string[] 
+    tags?: string[],
+    comingSoon?: boolean,
   }>
 }) {
   return (
