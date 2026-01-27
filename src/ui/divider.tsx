@@ -4,7 +4,8 @@ export function Divider() {
   return (
     <div className="divide flex flex-row justify-center items-center gap-4 px-4 sm:px-8 max-w-7xl w-full mx-auto">
         <div className="divider__line w-[50%] h-2 bg-accent" />
-        <img src="/logo--green.png" alt="Tarin Logo" className="divider__logo w-14 h-14 flex-shrink-0" />
+        <img src="/logo--green.png" alt="Tarin Logo" className="divider__logo block dark:hidden w-14 h-14 flex-shrink-0" />
+        <img src="/logo--purple--dark.png" alt="Tarin Logo" className="divider__logo hidden dark:block w-14 h-14 flex-shrink-0" />
         <div className="divider__line w-[50%] h-2 bg-accent" />
     </div>
   );

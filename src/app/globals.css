@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --light: #F5F5F5;
@@ -14,7 +11,7 @@
   --lavender-purple: #B089D0;
 }
 
-@theme inline {
+@theme {
   --color-canvas: var(--light);
   --color-base: var(--dark);
   --color-base-on-dark: var(--light);
@@ -26,13 +23,13 @@
     --color-canvas: var(--dark);
     --color-base: var(--light);
     --color-base-on-dark: var(--dark);
-    --color-accent: var(--electric-green);
+    --color-accent: var(--lavender-purple);
   }
 }
 
 @layer base {
   body {
-    @apply bg-accent font-sans lowercase;
+    @apply bg-accent font-sans lowercase text-base;
   }
   
   h2 {
