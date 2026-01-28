@@ -18,13 +18,13 @@
   --color-accent: var(--electric-green);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-canvas: var(--dark);
-    --color-base: var(--light);
-    --color-base-on-dark: var(--dark);
-    --color-accent: var(--lavender-purple);
-  }
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+  --color-canvas: var(--dark);
+  --color-base: var(--light);
+  --color-base-on-dark: var(--dark);
+  --color-accent: var(--lavender-purple);
 }
 
 @layer base {
