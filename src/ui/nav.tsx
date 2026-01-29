@@ -1,6 +1,6 @@
 'use client';
 
-import Image from "next/image";
+import { Logo } from "@/ui/theming";
 
 export function Nav() {
   const toggleDarkMode = () => {
@@ -10,14 +10,11 @@ export function Nav() {
   return (
     <nav className="nav bg-color-canvas w-full max-w-7xl mx-auto px-4 sm:px-8 pt-4">
       <div className="nav-logo flex items-center justify-between h-14">
-        <a href="#">
-          <Image src="/logo--green.png" alt="Tarin" width={56} height={56} className="block dark:hidden" />
-          <Image src="/logo--purple--dark.png" alt="Tarin" width={56} height={56} className="hidden dark:block" />
-        </a>
+        <Logo />
 
         <div className="nav-links flex gap-6 ml-4 pb-4 border-b-4 border-accent w-full justify-end">
           <button className="nav-links__dark-mode-toggle hover:cursor-pointer" onClick={toggleDarkMode} aria-label="Toggle dark mode on/off">
-            <div className="nav-links__sun hidden dark:block">
+            <div className="nav-links__sun hidden dark:block hover:text-accent">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                   fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                   aria-hidden="true" focusable="false">
@@ -25,7 +22,7 @@ export function Nav() {
                 <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
               </svg>
             </div>
-            <div className="nav-links__moon block dark:hidden">
+            <div className="nav-links__moon block dark:hidden hover:text-accent">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                   fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                   aria-hidden="true" focusable="false">

@@ -27,6 +27,42 @@
   --color-accent: var(--lavender-purple);
 }
 
+@custom-variant pink (&:where(.pink, .pink *));
+
+.pink {
+  --color-accent: var(--hot-pink);
+}
+
+@custom-variant red (&:where(.red, .red *));
+
+.red {
+  --color-accent: var(--coral-red);
+}
+
+@custom-variant yellow (&:where(.yellow, .yellow *));
+
+.yellow {
+  --color-accent: var(--marigold-yellow);
+}
+
+@custom-variant green (&:where(.green, .green *));
+
+.green {
+  --color-accent: var(--electric-green);
+}
+
+@custom-variant blue (&:where(.blue, .blue *));
+
+.blue {
+  --color-accent: var(--cerulean-blue);
+}
+
+@custom-variant purple (&:where(.purple, .purple *));
+
+.purple {
+  --color-accent: var(--lavender-purple);
+}
+
 @layer base {
   body {
     @apply bg-accent font-sans lowercase text-base;
